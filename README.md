@@ -22,7 +22,9 @@
       {
         "clash_mode": "Global",
         "outbound": "select"
-      }
+      }3f90:ad2d:8810:77f3/128"
+      ],
+      "private_key": "CCC/TQTc82ub9i8f37Rpix2v425Sv/mxTzvE/iKRMkw
     ],
     "auto_detect_interface": true,
     "override_android_vpn": true
@@ -55,10 +57,10 @@
         "172.16.0.2/32",
         "2606:4700:110:8c91:4063:21d0:7dd5:f218/128"
       ],
-      "private_key": "CBVIIWvXdLr4PbSrnm11ZJJ300IiPudRD4R62/IxV1g=",
-      "server": "188.114.99.131",
-      "server_port": 7152,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "private_key": "oATApHzbjMCuLh7jg73//tLQuoACnSMcB5W49AqOoFY/IxV1g=",
+      "server": "188.114.97.98",
+      "server_port": 891,
+      "peer_public_key": " bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
       "fake_packets": "5-10"
@@ -69,11 +71,9 @@
       "detour": "IP->Iran, Yotube:MisaHiro",
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8c15:3f90:ad2d:8810:77f3/128"
-      ],
-      "private_key": "CCC/TQTc82ub9i8f37Rpix2v425Sv/mxTzvE/iKRMkw=",
-      "server": "188.114.99.131",
-      "server_port": 7152,
+        "2606:4700:110:8c15:=",
+      "server": "188.114.97.98",
+      "server_port": 891,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
