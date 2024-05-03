@@ -1,99 +1,99 @@
 {  
-"route": {
+"مسیر": {
     "geoip": {
       "path": "geo-assets\\sagernet-sing-geoip-geoip.db"
-    },
-    "geosite": {
+    }،
+    "ژئوسایت": {
       "path": "geo-assets\\sagernet-sing-geosite-geosite.db"
-    },
-    "rules": [
+    }،
+    "قوانین": [
       {
-        "inbound": "dns-in",
+        "inbound": "dns-in"،
         "outbound": "dns-out"
-      },
+      }،
       {
-        "port": 53,
+        "پورت": 53،
         "outbound": "dns-out"
-      },
+      }،
       {
-        "clash_mode": "Direct",
-        "outbound": "direct"
-      },
+        "clash_mode": "مستقیم"،
+        "خروجی": "مستقیم"
+      }،
       {
-        "clash_mode": "Global",
-        "outbound": "select"
+        "clash_mode": "جهانی"،
+        "خروجی": "انتخاب"
       }
-    ],
-    "auto_detect_interface": true,
-    "override_android_vpn": true
-  },
-  "outbounds": [
+    ]،
+    "auto_detect_interface": درست است،
+    "override_android_vpn": درست است
+  }،
+  "خروجی": [
     {
-      "type": "selector",
-      "tag": "select",
-      "outbounds": [
-        "auto",
-        "IP->Iran, Yotube:MisaHiro",
+      "نوع": "انتخاب کننده"،
+      "برچسب": "انتخاب"،
+      "خروجی": [
+        "خودکار"،
+        "IP->ایران، یوتیوب:MisaHiro"،
         "IP->Main, Yotube:MisaHiro"
-      ],
-      "default": "auto"
-    },
+      ]،
+      "پیش فرض": "خودکار"
+    }،
     {
       "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "IP->Iran, Yotube:MisaHiro",
+      "برچسب": "خودکار"،
+      "خروجی": [
+        "IP->ایران، یوتیوب:MisaHiro"،
         "IP->Main, Yotube:MisaHiro"
-      ],
-      "url": "http://cp.cloudflare.com/",
-      "interval": "10m0s"
-    },
+      ]،
+      "url": "http://cp.cloudflare.com/"،
+      "فاصله": "10m0s"
+    }،
     {
-      "type": "wireguard",
+      "نوع": "گارد سیم"،
       "tag": "IP->Iran, Yotube:MisaHiro",
-      "local_address": [
-        "172.16.0.2/32",
+      "آدرس محلی": [
+        "172.16.0.2/32"،
         "2606:4700:110:8c91:4063:21d0:7dd5:f218/128"
-      ],
-      "private_key": "CBVIIWvXdLr4PbSrnm11ZJJ300IiPudRD4R62/IxV1g=",
-      "server": "188.114.97.98",
-      "server_port": 891,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "AAAA",
-      "mtu": 1280,
+      ]،
+      "private_key": "CBVIIWvXdLr4PbSrnm11ZJJ300IiPudRD4R62/IxV1g="،
+      "سرور": "188.114.96.233"،
+      "server_port": 1018،
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="،
+      "رزرو شده": "AAAA"،
+      "mtu": 1280،
       "fake_packets": "5-10"
-    },
+    }،
     {
-      "type": "wireguard",
-      "tag": "IP->Main, Yotube:MisaHiro",
-      "detour": "IP->Iran, Yotube:MisaHiro",
-      "local_address": [
-        "172.16.0.2/32",
+      "نوع": "گارد سیم"،
+      "برچسب": "IP->Main، Yotube:MisaHiro"،
+      "دور": "IP->ایران، یوتیوب:MisaHiro"،
+      "آدرس محلی": [
+        "172.16.0.2/32"،
         "2606:4700:110:8c15:3f90:ad2d:8810:77f3/128"
-      ],
-      "private_key": "oATApHzbjMCuLh7jg73//tLQuoACnSMcB5W49AqOoFY=",
-      "server": "188.114.97.98",
-      "server_port": 891,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "AAAA",
-      "mtu": 1280,
+      ]،
+      "private_key": "CCC/TQTc82ub9i8f37Rpix2v425Sv/mxTzvE/iKRMkw="،
+      "سرور": "188.114.96.233"،
+      "server_port": 1018،
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="،
+      "رزرو شده": "AAAA"،
+      "mtu": 1280،
       "fake_packets": "5-10"
-    },
+    }،
     {
-      "type": "dns",
-      "tag": "dns-out"
-    },
+      "نوع": "dns"،
+      "برچسب": "dns-out"
+    }،
     {
-      "type": "direct",
-      "tag": "direct"
-    },
+      "نوع": "مستقیم"،
+      "برچسب": "مستقیم"
+    }،
     {
-      "type": "direct",
-      "tag": "bypass"
-    },
+      "نوع": "مستقیم"،
+      "برچسب": "دور زدن"
+    }،
     {
       "type": "block",
-      "tag": "block"
+      "برچسب": "مسدود کردن"
     }
   ]  
 }
